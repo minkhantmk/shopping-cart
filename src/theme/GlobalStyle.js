@@ -51,6 +51,13 @@ table {
 h1,h2,p {
 	font-family: 'Roboto', sans-serif;
 }
+h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+h3 {
+	font-size: 1.5rem;
+}
 `;
 
 export default GlobalStyle;
