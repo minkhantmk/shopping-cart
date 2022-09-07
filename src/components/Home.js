@@ -15,10 +15,14 @@ const Home = () => {
       />
       <Title>
         <h1>Welcome to SkateShop</h1>
-        <h3>_Offering the highest quality skate equipment</h3>
-      <Button whileHover={{scale:1.05, backgroundColor:"#000", color:"#fff"}}>Shop Now</Button>
+        <h2>_Offering the highest quality skate equipment</h2>
+        <Button
+          whileHover={{ scale: 1.05, backgroundColor: "#000", color: "#fff" }}
+          href="/products"
+        >
+          Shop Now
+        </Button>
       </Title>
-
     </motion.div>
   );
 };
@@ -43,14 +47,15 @@ const Title = styled.div`
   }
 `;
 
-const Button = styled(motion.div)`
-display: inline-block;
-left:-2px;
-margin: 1rem 0;
-border: 2px solid black;
-font-size: 1.2rem;
-padding: 1.5rem 5rem;
-cursor: pointer;
-`
+const Button = styled(motion.a)`
+  display: inline-block;
+  left: -2px;
+  margin: 1rem 0;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  text-decoration: none;
+`;
 
 export default Home;

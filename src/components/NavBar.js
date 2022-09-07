@@ -25,7 +25,7 @@ const NavBar = () => {
               </CloseIcon>
               <ul>
                 <li>
-                  <a href="#">Products</a>
+                  <a href="/products">Products</a>
                 </li>
                 <li>
                   <a href="#">Contact</a>
@@ -44,7 +44,7 @@ const NavBar = () => {
       </AnimatePresence>
       <NavLinks>
         <li>
-          <a href="#">Products</a>
+          <a href="/products">Products</a>
         </li>
         <li>
           <a href="#">Contact</a>
@@ -75,7 +75,7 @@ const NavBarContainer = styled.div`
   color: black;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid ${({theme}) => theme.colors.gray};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.gray};
 `;
 
 const NavLinks = styled.ul`
