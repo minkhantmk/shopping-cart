@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Card = ({ name, brand, size, price, image }) => {
   return (
@@ -10,6 +11,11 @@ const Card = ({ name, brand, size, price, image }) => {
         <h4>{brand}</h4>
         <h4>{size}</h4>
         <h3>NZ${price}</h3>
+        <Button
+          whileHover={{ scale: 1.05, backgroundColor: "#000", color: "#fff" }}
+        >
+          Add to Cart
+        </Button>
       </Info>
     </GridItem>
   );
@@ -19,10 +25,9 @@ const GridItem = styled.div`
   display: flex;
   background-color: white;
   padding: 15px;
-  height: 200px;
+  height: auto;
 
   img {
-    height: 100%;
     width: 25%;
     object-fit: cover;
     padding-right: 20px;
@@ -32,6 +37,7 @@ const GridItem = styled.div`
 const Info = styled.div`
   width: 75%;
   & > *:nth-child(1) {
+    height: 40px;
     padding-bottom: 20px;
   }
   & > *:nth-child(3) {
@@ -41,6 +47,17 @@ const Info = styled.div`
     padding-top: 30px;
     border-top: 1px solid black;
   }
+`;
+
+const Button = styled(motion.button)`
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  margin-top: 2rem;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 1rem;
+  cursor: pointer;
 `;
 
 export default Card;

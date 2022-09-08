@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,12 +17,13 @@ const Home = () => {
       <Title>
         <h1>Welcome to SkateShop</h1>
         <h2>_Offering the highest quality skate equipment</h2>
-        <Button
-          whileHover={{ scale: 1.05, backgroundColor: "#000", color: "#fff" }}
-          href="/products"
-        >
-          Shop Now
-        </Button>
+        <Link to="/products">
+          <Button
+            whileHover={{ scale: 1.05, backgroundColor: "#000", color: "#fff" }}
+          >
+            Shop Now
+          </Button>
+        </Link>
       </Title>
     </motion.div>
   );
@@ -47,15 +49,15 @@ const Title = styled.div`
   }
 `;
 
-const Button = styled(motion.a)`
+const Button = styled(motion.button)`
   display: inline-block;
-  left: -2px;
   margin: 1rem 0;
+  background-color: white;
   border: 2px solid black;
   font-size: 1.2rem;
-  padding: 1.2rem 3rem;
   cursor: pointer;
-  text-decoration: none;
+  width: 180px;
+  height: 60px;
 `;
 
 export default Home;

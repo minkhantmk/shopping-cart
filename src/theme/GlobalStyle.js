@@ -36,6 +36,10 @@ ol, ul {
 li a {
 	text-decoration: none;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 blockquote, q {
 	quotes: none;
 }

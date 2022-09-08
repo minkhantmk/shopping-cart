@@ -24,7 +24,6 @@ const CardGrid = styled.div`
   height: auto;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
 `;
 
 export default CardCollection;
